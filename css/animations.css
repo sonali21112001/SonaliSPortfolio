@@ -1,0 +1,477 @@
+/* ==========================
+   FLOATING PROFILE CARD
+========================== */
+
+.profile-card{
+    animation:floatProfile 5s ease-in-out infinite;
+}
+
+@keyframes floatProfile{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ==========================
+   TYPING CURSOR EFFECT
+========================== */
+
+#typing-text{
+
+    position:relative;
+    display:inline-block;
+
+}
+
+#typing-text::after{
+
+    content:"";
+
+    width:3px;
+    height:100%;
+
+    background:var(--primary);
+
+    position:absolute;
+    right:-8px;
+    top:0;
+
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+/* ==========================
+   BUTTERFLY ANIMATIONS
+========================== */
+
+@keyframes fly1{
+
+    0%{
+        transform:
+        translate(-100px,90vh)
+        rotate(0deg);
+    }
+
+    100%{
+        transform:
+        translate(120vw,-100px)
+        rotate(360deg);
+    }
+
+}
+
+@keyframes fly2{
+
+    0%{
+        transform:
+        translate(-150px,70vh)
+        rotate(0deg);
+    }
+
+    100%{
+        transform:
+        translate(120vw,-200px)
+        rotate(-360deg);
+    }
+
+}
+
+@keyframes fly3{
+
+    0%{
+        transform:
+        translate(-100px,50vh)
+        rotate(0deg);
+    }
+
+    100%{
+        transform:
+        translate(120vw,-150px)
+        rotate(360deg);
+    }
+
+}
+
+@keyframes fly4{
+
+    0%{
+        transform:
+        translate(-120px,80vh)
+        rotate(0deg);
+    }
+
+    100%{
+        transform:
+        translate(120vw,-180px)
+        rotate(-360deg);
+    }
+
+}
+
+@keyframes fly5{
+
+    0%{
+        transform:
+        translate(-100px,60vh)
+        rotate(0deg);
+    }
+
+    100%{
+        transform:
+        translate(120vw,-250px)
+        rotate(360deg);
+    }
+
+}
+
+/* ==========================
+   BADGES FLOAT
+========================== */
+
+.badge1{
+    animation:badgeFloat1 4s ease-in-out infinite;
+}
+
+.badge2{
+    animation:badgeFloat2 5s ease-in-out infinite;
+}
+
+.badge3{
+    animation:badgeFloat3 6s ease-in-out infinite;
+}
+
+@keyframes badgeFloat1{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes badgeFloat2{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+@keyframes badgeFloat3{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* ==========================
+   GRADIENT BACKGROUND FLOW
+========================== */
+
+body{
+
+    background-size:400% 400%;
+
+    animation:
+    gradientFlow 15s ease infinite;
+
+}
+
+@keyframes gradientFlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* ==========================
+   FADE UP ANIMATION
+========================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:
+    translateY(50px);
+
+    transition:
+    all .8s ease;
+
+}
+
+.fade-up.active{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+/* ==========================
+   SCALE IN
+========================== */
+
+.scale-in{
+
+    opacity:0;
+
+    transform:
+    scale(.8);
+
+    transition:
+    all .7s ease;
+
+}
+
+.scale-in.active{
+
+    opacity:1;
+
+    transform:
+    scale(1);
+
+}
+
+/* ==========================
+   PROJECT CARD SHINE
+========================== */
+
+.project-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.4),
+        transparent
+    );
+
+}
+
+.project-card:hover::before{
+
+    animation:shine 1.2s linear;
+}
+
+@keyframes shine{
+
+    from{
+        left:-100%;
+    }
+
+    to{
+        left:120%;
+    }
+}
+
+/* ==========================
+   BUTTON GLOW
+========================== */
+
+.primary-btn,
+.contact-form button,
+#motivationBtn{
+
+    box-shadow:
+    0 0 20px rgba(255,79,160,.25);
+
+}
+
+.primary-btn:hover,
+.contact-form button:hover,
+#motivationBtn:hover{
+
+    box-shadow:
+    0 0 35px rgba(255,79,160,.45);
+
+}
+
+/* ==========================
+   SKILL CARD GLOW
+========================== */
+
+.skill-card:hover{
+
+    box-shadow:
+    0 20px 40px rgba(255,79,160,.25);
+
+}
+
+/* ==========================
+   AI CARD HOVER
+========================== */
+
+.ai-card{
+
+    transition:.4s;
+
+}
+
+.ai-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 15px 35px rgba(192,108,255,.3);
+
+}
+
+/* ==========================
+   SOCIAL ICON ROTATE
+========================== */
+
+.social-links a:hover{
+
+    transform:
+    translateY(-8px)
+    rotate(10deg);
+
+}
+
+/* ==========================
+   TIMELINE PULSE
+========================== */
+
+.timeline-item{
+
+    transition:.4s;
+
+}
+
+.timeline-item:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 15px 35px rgba(255,79,160,.2);
+
+}
+
+/* ==========================
+   SPARKLE EFFECT
+========================== */
+
+.sparkle{
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:white;
+
+    pointer-events:none;
+
+    animation:sparkle 1.5s linear forwards;
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+        scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translateY(-30px)
+        scale(0);
+
+    }
+
+}
+
+/* ==========================
+   FLOATING ICONS
+========================== */
+
+.floating-icon{
+
+    position:absolute;
+
+    animation:
+    floatIcon 4s ease-in-out infinite;
+
+}
+
+@keyframes floatIcon{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
